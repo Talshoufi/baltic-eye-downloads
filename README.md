@@ -2,7 +2,7 @@
 
 **Baltic IT - Tareq Alshoufi**
 
-Dedicated live-camera viewing for Ubuntu 24.04 Desktop, Intel/AMD 64-bit PCs. This repository contains the public setup script and compiled application downloads. Application source is maintained privately. No GitHub login is needed to install.
+Dedicated live-camera viewing for Ubuntu 24.04 and 26.04 Desktop, Intel/AMD 64-bit PCs. This repository contains the public setup script and compiled application downloads. Application source is maintained privately. No GitHub login is needed to install.
 
 ## Install
 
@@ -17,7 +17,7 @@ bash install.sh
 ~/.local/bin/baltic-eye --windowed
 ```
 
-The script downloads the compiled v0.5.0 package and verifies its checksum. Internet access is required. Run as the desktop user; the installer requests sudo only for system dependencies. Existing cameras and credentials are retained and backed up. First-time installations ask you to set an administrator password and add your cameras.
+The script detects Ubuntu 24.04 or 26.04, downloads the matching compiled v0.5.0 package and verifies its checksum. Ubuntu 24.04 uses the Python 3.12 build; Ubuntu 26.04 uses the Python 3.14 build. Internet access is required. Run as the desktop user; the installer requests sudo only for system dependencies. Existing cameras and credentials are retained and backed up. First-time installations ask you to set an administrator password and add your cameras.
 
 Alternatively, download the ZIP and checksum from [Releases](https://github.com/Talshoufi/baltic-eye-downloads/releases), verify using `sha256sum -c`, extract the ZIP, and run `bash install-ubuntu.sh` from the extracted directory.
 
