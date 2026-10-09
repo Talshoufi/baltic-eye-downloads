@@ -1,4 +1,4 @@
-# Baltic Eye — installer downloads
+# Baltic Eye â€” installer downloads
 
 **Baltic IT - Tareq Alshoufi**
 
@@ -17,7 +17,7 @@ bash install.sh
 ~/.local/bin/baltic-eye --windowed
 ```
 
-The script downloads the compiled v0.3.0 package and verifies its checksum. Internet access is required. Run as the desktop user; the installer requests sudo only for system dependencies. Existing cameras and credentials are retained and backed up. First-time installations ask you to set an administrator password and add your cameras.
+The script downloads the compiled v0.5.0 package and verifies its checksum. Internet access is required. Run as the desktop user; the installer requests sudo only for system dependencies. Existing cameras and credentials are retained and backed up. First-time installations ask you to set an administrator password and add your cameras.
 
 Alternatively, download the ZIP and checksum from [Releases](https://github.com/Talshoufi/baltic-eye-downloads/releases), verify using `sha256sum -c`, extract the ZIP, and run `bash install-ubuntu.sh` from the extracted directory.
 
@@ -37,6 +37,6 @@ Close Baltic Eye and run `bash ~/.local/share/baltic-eye-tools/rollback.sh` to s
 
 ## Release status
 
-Version 0.3.0 is an appliance release candidate. Live viewing only; no recording, PTZ or ONVIF discovery. Hardware capacity and camera compatibility vary. Reboot/recovery and sustained-load testing on the target appliance remain required before customer deployment.
+Version 0.5.0 is an appliance release candidate. Live viewing only; no recording or PTZ. Includes independent saved views, multiple viewing windows, and bulk camera setup with ONVIF discovery and stream testing. Hardware capacity and camera compatibility vary. Reboot/recovery and sustained-load testing on the target appliance remain required before customer deployment.
 
 The original application Python source is not distributed in this package. Compilation is not a guarantee against reverse engineering. Runtime dependencies are installed separately and retain their own licence terms; see the package's third-party and compiler notices. A public download does not make the application open source.

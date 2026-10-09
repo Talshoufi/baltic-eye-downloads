@@ -13,14 +13,14 @@ command -v curl >/dev/null || { echo 'Install curl first: sudo apt install curl'
 command -v python3 >/dev/null || { echo 'Install python3 first: sudo apt install python3' >&2; exit 1; }
 TASK_DIR=$(mktemp -d -t baltic-eye-install.XXXXXXXX)
 trap 'rm -rf -- "$TASK_DIR"' EXIT
-BASE_URL='https://github.com/Talshoufi/baltic-eye-downloads/releases/download/v0.3.0'
-ARCHIVE='baltic-eye-0.3.0-ubuntu24.04-amd64.zip'
+BASE_URL='https://github.com/Talshoufi/baltic-eye-downloads/releases/download/v0.5.0'
+ARCHIVE='baltic-eye-0.5.0-ubuntu24.04-amd64.zip'
 cd "$TASK_DIR"
 curl --fail --location --proto '=https' --tlsv1.2 --retry 3 --output "$ARCHIVE" "$BASE_URL/$ARCHIVE"
 curl --fail --location --proto '=https' --tlsv1.2 --retry 3 --output "$ARCHIVE.sha256" "$BASE_URL/$ARCHIVE.sha256"
 sha256sum --check "$ARCHIVE.sha256"
 python3 -m zipfile -e "$ARCHIVE" .
-cd baltic-eye-0.3.0
+cd baltic-eye-0.5.0
 bash install-ubuntu.sh
 # Retain operations scripts for autostart and rollback after temporary extraction ends.
 mkdir -p "$HOME/.local/share/baltic-eye-tools"
